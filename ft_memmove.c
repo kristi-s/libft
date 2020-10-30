@@ -9,10 +9,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (ft_memcpy(dst, src, len));
 	else
 	{
-		len--;
 		while(len)
 		{
-			()
+			len--;	
+			*((char *)(dst + len)) = *((char *)(src + len));
 		}
+		return (dst);
 	}
 }

@@ -1,5 +1,16 @@
-#include <string.h>
-void	*ft_memcpy(void *dst, const void *src, size_t n);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/31 21:49:05 by droslyn           #+#    #+#             */
+/*   Updated: 2020/10/31 21:49:10 by droslyn          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h" 
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

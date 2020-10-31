@@ -1,5 +1,16 @@
-#include <string.h>
-size_t		ft_strlen(const char *s);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/31 21:54:57 by droslyn           #+#    #+#             */
+/*   Updated: 2020/10/31 21:55:28 by droslyn          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h" 
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

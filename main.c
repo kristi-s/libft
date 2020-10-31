@@ -6,15 +6,12 @@
 /*   By: droslyn <droslyn@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 23:02:32 by droslyn           #+#    #+#             */
-/*   Updated: 2020/10/23 23:18:31 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/10/31 21:59:26 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-int		ft_isdigit(int c);
-int		ft_isalpha(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
+#include "libft.h"
 
 int		main()
 {

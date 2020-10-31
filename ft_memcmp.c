@@ -6,11 +6,11 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 15:04:24 by droslyn           #+#    #+#             */
-/*   Updated: 2020/10/30 15:26:51 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/10/31 21:47:24 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -1,6 +1,16 @@
-#include <stdlib.h>
-void	*ft_memcpy(void	*dst, const void *src, size_t n);
-size_t	ft_strlen(const char *s);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/31 21:51:20 by droslyn           #+#    #+#             */
+/*   Updated: 2020/10/31 21:51:50 by droslyn          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h" 
 
 char	*ft_strdup(const char *s1)
 {

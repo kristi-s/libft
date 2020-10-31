@@ -6,7 +6,7 @@
 #    By: droslyn <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 20:58:17 by droslyn           #+#    #+#              #
-#    Updated: 2020/10/30 21:40:43 by droslyn          ###   ########.fr        #
+#    Updated: 2020/10/31 22:10:59 by droslyn          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,3 +38,5 @@ fclean:	clean
 		${RM} ${NAME}
 
 re:		fclean all
+
+.PHONY:	all clean fclean re

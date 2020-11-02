@@ -6,9 +6,17 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 21:39:21 by droslyn           #+#    #+#             */
-/*   Updated: 2020/10/31 21:39:44 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/02 22:34:42 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+static int		ft_isspace(char c)
+{
+	if (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || 
+			c == '\r')
+		return (1);
+	return (0);
+}
 
 int		ft_atoi(const char *str)
 {
@@ -19,7 +27,7 @@ int		ft_atoi(const char *str)
 	minus = 1;
 	if (!str)
 		return (0);
-	while (*str == ' ')
+	while (ft_isspace(*str))
 		str++;
 	if (*str == '-')
 	{

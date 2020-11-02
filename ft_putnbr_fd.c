@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/30 15:04:24 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/02 21:07:09 by droslyn          ###   ########.fr       */
+/*   Created: 2020/11/02 19:07:31 by droslyn           #+#    #+#             */
+/*   Updated: 2020/11/02 19:09:42 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t			i;
-	unsigned char	*ptr_s1;
-	unsigned char	*ptr_s2;
+	char *num;
 
-	ptr_s1 = (unsigned char	*)s1;
-	ptr_s2 = (unsigned char *)s2;
-	i = 0;
-	while ((i < n) && (*(ptr_s1 + i) == *(ptr_s2 + i)))
-		i++;
-	if (i < n)
-		return 	(*(ptr_s1 + i) - *(ptr_s2 + i));
-	else
-		return (0);
+	num = ft_itoa(n);
+	ft_putstr_fd(num, fd);
+	return;
 }

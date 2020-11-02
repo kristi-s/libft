@@ -13,5 +13,6 @@ int		main()
 	printf("my str = %s\n", ft_memcpy(str2, st2, 3));
 	printf("std str = %s\n", memcpy(str1, st1, 4));
 	printf("my str = %s\n", ft_memcpy(str2, st2, 4));
+
 	return 0;
 }

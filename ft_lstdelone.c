@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 16:40:03 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/03 18:03:36 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/04 15:59:12 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list	*lst, void (*del)(void*))
 {
-	if (!lst)
+	if (!lst || !(*del))
 		return ;
 	(*del)(lst->content);
 	free(lst);

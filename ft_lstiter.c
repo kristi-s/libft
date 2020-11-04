@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 18:25:07 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/03 18:33:23 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/04 15:55:09 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst)
+	while (lst && (*f))
 	{
 		(*f)(lst->content);
 		lst = lst->next;

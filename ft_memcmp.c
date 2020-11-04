@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 15:04:24 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/02 21:07:09 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/04 17:45:19 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	while ((i < n) && (*(ptr_s1 + i) == *(ptr_s2 + i)))
 		i++;
 	if (i < n)
-		return 	(*(ptr_s1 + i) - *(ptr_s2 + i));
+		return (*(ptr_s1 + i) - *(ptr_s2 + i));
 	else
 		return (0);
 }

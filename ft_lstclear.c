@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 18:04:51 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/04 15:57:44 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/04 18:09:36 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	void *ptr;
+	t_list *ptr;
+	t_list *ptr_next;
 
 	if (!lst || !(*del))
-	while (*lst)
+		return ;
+	ptr = *lst;
+	while (ptr)
 	{
-		ptr = *lst->next;
-		(*del)(*lst->content);
-		free(*lst);
-		*lst = ptr;
+		ptr_next = ptr->next;
+		(*del)(ptr->content);
+		free(ptr);
+		ptr = ptr_next;
 	}
-	**lst = 0;
+	*lst = 0;
 }

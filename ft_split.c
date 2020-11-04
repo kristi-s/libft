@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 15:41:41 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/02 17:26:05 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/04 18:00:35 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	count_wd = ft_count_word (s, c);
+	count_wd = ft_count_word(s, c);
 	if (!(ptr_arr = malloc((count_wd + 1) * (sizeof(char*)))))
 		return (0);
 	ptr_arr[count_wd] = 0;
@@ -72,11 +72,11 @@ char	**ft_split(char const *s, char c)
 		{
 			if (!(ptr_arr[i] = ft_word_copy(s, c)))
 			{
-				free (ptr_arr);
+				free(ptr_arr);
 				return (0);
 			}
 			i++;
-			while(*s != c && *s != '\0')
+			while (*s != c && *s != '\0')
 				s++;
 		}
 	}

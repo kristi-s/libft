@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:36:45 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/02 18:39:52 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/04 17:59:11 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
-		return;
+		return ;
 	while (*s)
 	{
 		write(fd, s, 1);
 		s++;
 	}
-	return;
+	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 21:40:10 by droslyn           #+#    #+#             */
-/*   Updated: 2020/10/31 21:40:34 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/04 20:47:58 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,10 @@ void	ft_bzero(void *s, size_t n)
 	size_t i;
 
 	i = 0;
-	if (!s || n == 0)
-		return;
 	while (i < n)
 	{
 		*((unsigned char *)(s + i)) = 0;
 		i++;
 	}
-	return;
+	return ;
 }

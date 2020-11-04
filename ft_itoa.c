@@ -6,16 +6,16 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 18:04:46 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/01 20:25:44 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/04 17:56:22 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_len_int(int num)
+static int		ft_len_int(int num)
 {
-	int				size;
 	unsigned int	nm;
+	int				size;
 
 	size = 0;
 	if (num == 0)

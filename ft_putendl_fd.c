@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:54:11 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/02 19:05:49 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/04 17:58:08 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
-		return;
+		return ;
 	while (*s)
 	{
 		write(fd, s, 1);
 		s++;
 	}
 	write(fd, "\n", 1);
-	return;
+	return ;
 }

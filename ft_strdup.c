@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 21:57:39 by droslyn           #+#    #+#             */
-/*   Updated: 2020/10/31 21:57:44 by droslyn          ###   ########.fr       */
+/*   Created: 2020/10/31 21:51:20 by droslyn           #+#    #+#             */
+/*   Updated: 2020/10/31 21:51:50 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+#include "libft.h" 
+
+char	*ft_strdup(const char *s1)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+	size_t	len;
+	char	*ptr;
+
+	len = ft_strlen(s1);
+	if (!(ptr = malloc(len * sizeof(char))))
+		return (0);
+	ptr = ft_memcpy(ptr, s1, len);
+	return (ptr);
 }

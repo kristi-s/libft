@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 21:57:39 by droslyn           #+#    #+#             */
-/*   Updated: 2020/10/31 21:57:44 by droslyn          ###   ########.fr       */
+/*   Created: 2020/11/01 20:34:53 by droslyn           #+#    #+#             */
+/*   Updated: 2020/11/04 18:05:23 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+#include "libft.h"
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+	size_t			len;
+	char			*str;
+	unsigned int	i;
+
+	if (!s)
+		return (0);
+	i = 0;
+	len = ft_strlen(s);
+	if (!(str = malloc((len + 1) * sizeof(char))))
+		return (0);
+	while (*s)
+	{
+		str[i] = (*f)(i, *s);
+		s++;
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }

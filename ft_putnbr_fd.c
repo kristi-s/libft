@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 21:57:39 by droslyn           #+#    #+#             */
-/*   Updated: 2020/10/31 21:57:44 by droslyn          ###   ########.fr       */
+/*   Created: 2020/11/02 19:07:31 by droslyn           #+#    #+#             */
+/*   Updated: 2020/11/04 17:58:40 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+#include "libft.h"
+
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+	char *num;
+
+	num = ft_itoa(n);
+	ft_putstr_fd(num, fd);
+	return ;
 }

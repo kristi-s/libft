@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 21:53:33 by droslyn           #+#    #+#             */
-/*   Updated: 2020/10/31 21:53:53 by droslyn          ###   ########.fr       */
+/*   Created: 2020/11/01 17:56:11 by droslyn           #+#    #+#             */
+/*   Updated: 2020/11/02 15:04:13 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlen(const char *s)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t len;
-
-	len = 0;
-	while (*s != '\0')
+	size_t	size;
+	char	*ptr_str;
+	char	*str;
+	
+	if (!s1 || !set)
+		return (0);
+	while (*s1 != '\0' && ft_strchr(set, (int)*s1))
+		s1++;
+	size = ft_strlen(s1);
+	while (ft_strchr(set, (int)*(s1 + size - 1)))
+		size--;
+	if (!(str = malloc((size + 1) * sizeof(char))))
+		return (0);
+	ptr_str = str;
+	while (size)
 	{
-		len++;
-		s++;
+		*str = *s1;
+		str++;
+		s1++;
+		size--;
 	}
-	return (len);
+	*str = '\0';
+	return (ptr_str);
 }

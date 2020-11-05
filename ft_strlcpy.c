@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 21:57:39 by droslyn           #+#    #+#             */
-/*   Updated: 2020/10/31 21:57:44 by droslyn          ###   ########.fr       */
+/*   Created: 2020/10/31 21:52:58 by droslyn           #+#    #+#             */
+/*   Updated: 2020/10/31 21:53:20 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+#include "libft.h" 
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+	const char *src_copy;
+
+	if (!dst || !src)
+		return (0);
+
+	src_copy = src;	
+	while (dstsize > 1)
+	{
+		*dst = *src;
+		dstsize--;
+		dst++;
+		src++;
+	}
+	*dst = '\0';
+	return (ft_strlen(src_copy));
 }

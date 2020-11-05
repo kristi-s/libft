@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 21:54:57 by droslyn           #+#    #+#             */
-/*   Updated: 2020/10/31 21:55:28 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/05 19:11:10 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	n = 0;
-	if (!haystack || !needle)
+	if (!haystack && !needle)
 		return (0);
 	if (*needle == '\0')
 		return ((char *)haystack);

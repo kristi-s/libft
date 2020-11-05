@@ -6,13 +6,13 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 18:04:46 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/04 17:56:22 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/05 18:40:16 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_len_int(int num)
+static int			ft_len_int(int num)
 {
 	unsigned int	nm;
 	int				size;
@@ -35,7 +35,7 @@ static int		ft_len_int(int num)
 	return (size);
 }
 
-char	*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
 	int				size;
 	unsigned int	number;

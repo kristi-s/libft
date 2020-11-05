@@ -6,7 +6,7 @@
 #    By: droslyn <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 20:58:17 by droslyn           #+#    #+#              #
-#    Updated: 2020/11/04 17:23:19 by droslyn          ###   ########.fr        #
+#    Updated: 2020/11/05 16:10:24 by droslyn          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ bonus:	${OBJBNS}
 all:	${NAME}
 
 clean:
-		${RM} ${OBJS}
+		${RM} ${OBJS} ${OBJBNS}
 
 fclean:	clean
 		${RM} ${NAME}

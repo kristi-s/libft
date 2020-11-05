@@ -6,19 +6,19 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 21:39:21 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/04 20:46:09 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/05 18:14:27 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int		ft_isspace(char c)
+static int			ft_isspace(char c)
 {
-	if (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || 
+	if (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' ||
 			c == '\r')
 		return (1);
 	return (0);
 }
 
-int		ft_atoi(const char *str)
+int					ft_atoi(const char *str)
 {
 	unsigned int	res;
 	int				minus;
@@ -29,9 +29,10 @@ int		ft_atoi(const char *str)
 	i = 0;
 	while (ft_isspace(*str))
 		str++;
-	if (*str == '-')
+	if (*str == '-' || *str == '+')
 	{
-		minus = -minus;
+		if (*str == '-')
+			minus = -minus;
 		str++;
 	}
 	while (*str >= '0' && *str <= '9')

@@ -6,7 +6,7 @@
 #    By: droslyn <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 20:58:17 by droslyn           #+#    #+#              #
-#    Updated: 2020/11/05 16:10:24 by droslyn          ###   ########.fr        #
+#    Updated: 2020/11/06 23:09:55 by droslyn          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,8 +34,8 @@ $(NAME): ${OBJS}
 		ar rcs ${NAME} ${OBJS}
 		ranlib ${NAME}
 
-bonus:	${OBJBNS}
-		ar rcs ${NAME} ${OBJBNS}
+bonus:	${OBJBNS} ${OBJS}
+		ar rcs ${NAME} ${OBJBNS} ${OBJS}
 		ranlib ${NAME}
 
 all:	${NAME}

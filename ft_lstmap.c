@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 18:35:07 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/04 15:56:08 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/06 22:36:23 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*list;
 	t_list	*tail_lst;
 
-	if (!lst || !(*f) || !del)
+	if (!lst || !(*f))
 		return (0);
 	if (!(new_lst = ft_lstnew((*f)(lst->content))))
 		return (0);

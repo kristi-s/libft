@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 16:03:02 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/01 16:41:39 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/06 20:53:32 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (0);
+	if (start > ft_strlen(s))
+		start = ft_strlen(s);
 	str = (char *)s + start;
 	len_str = ft_strlen(str);
 	if (len < len_str)

@@ -5,7 +5,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		main()
 {
 	char str1[30] = "Hello nice pretty world! @#$";
-	char str2[6] = "nice";
+	char str2[6] = "world";
 	char *ptr1;
 	char *ptr2;
 

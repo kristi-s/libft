@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 21:42:17 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/04 20:48:47 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/07 18:06:11 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char	*ptr_src;
 	size_t			i;
 
-	ptr_src = (unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{

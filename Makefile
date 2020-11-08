@@ -6,7 +6,7 @@
 #    By: droslyn <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 20:58:17 by droslyn           #+#    #+#              #
-#    Updated: 2020/11/06 23:09:55 by droslyn          ###   ########.fr        #
+#    Updated: 2020/11/07 13:27:25 by droslyn          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ CFLAGS = -Wall -Wextra -Werror
 		${CC} ${CFLAGS} -I libft.h -c $< -o ${<:.c=.o}
 
 $(NAME): ${OBJS}
-		ar rcs ${NAME} ${OBJS}
+		ar rcs ${NAME} ${OBJS} 
 		ranlib ${NAME}
 
 bonus:	${OBJBNS} ${OBJS}
